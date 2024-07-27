@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #c70101;
+    --second-color: #2a2a2a;
+    --third-color: #fed900;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 18px;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    gap: 3px;
+    font-weight: 800;
+    font-family: "Montserrat";
+}
+.firstname{
+    color: var(--third-color);
+}
+.lastname{
+    color: white;
+}
+.menu-icon{
+    display: none;
+}
+ul{
+    display: flex;
+    gap: 10px;
+    font-family: helvetica;
+}
+ul li{
+    color: white;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+ul li a:hover {
+    border-bottom: 2px solid white;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    width: 45vh;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: #f2f2f2;
+}
+.form h3{
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tanggal, .nominal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: var(--second-color);
+    font-size: nunito;
+    color: white;
+}
+.btn:hover{
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+.btn-close{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.sidebar{
+    display: none;
+    position: fixed;
+    padding: 18px;
+    background-color: var(--main-color);
+    width: 150px;
+    height: 100vh;
+    z-index: 2;
+}
+.header-sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    font-weight: 800;
+    font-family: "Montserrat";
+}
+.list-sidebar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    margin: auto;
+    margin-top: 5vh;
+    opacity: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 20px;
+    padding: 18px;
+    z-index: 1;
+}
+.icon-menu {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.logo-header {
+    display: flex;
+    margin-right: 15px;
+    font-weight: 800;
+    font-family: "Montserrat";
+    gap: 3px;
+    position: fixed;
+    right: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+.dashboard{
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+    color: var(--second-color);
+    border-bottom: 2px solid var(--main-color);
+}
+.jam {
+    margin-top: 2vh;
+}
+table {
+    border: 1px solid #191919;
+}
+input {
+    width: 100%;
+    border: 1px solid var(--second-color);
+    padding: 10px 10;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+footer{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--second-color);
+    gap: 2px;
+}
+footer i, p{
+    color: white;
+    font-family: nunito;
+    font-size: 14px;
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    .sidebar{
+        width: 130px;
+    }
+    .header-sidebar{
+        font-size: 13px;
+    }
+    .list-sidebar{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 468px){
+    .sidebar {
+        width: 100px;
+    }
+    .header-sidebar{
+        font-size: 11px;
+    }
+    .list-sidebar{
+        font-size: 12px;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    .menu-icon{
+        display: flex;
+        color: white;
+        font-size: 20px;
+    }
+    ul {
+        margin-top: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .hidden{
+        display: none;
+    }
+}
